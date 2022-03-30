@@ -1,0 +1,46 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title>Add Book </title>
+		
+		
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous" />
+	</head>
+	<body>
+		
+		<div class="container">
+		
+			<h3>Add New book</h3>
+			<hr/>
+			
+			<form th:action="@{/saveBook}"  method="POST">
+				
+				        <div class="border border-secondary p-3 rounded">
+            <p>Add new book  </p>
+            <p>
+                <input type="text" name="book_name" class="form-control" placeholder="Enter book name " required autofocus/>
+            </p>
+            <p>
+                <input type="text" name="author_name" class="form-control" placeholder="Enter author's name" required />
+            </p>
+            <p>
+                <input type="text" name="category" class="form-control" placeholder="Enter book category" required />
+            </p>
+            
+            <p>
+                <input type="submit" value="save" class="btn btn-primary" />
+            </p>
+        </div>
+				
+				
+				
+				
+			</form>
+			<hr/>
+			
+		</div>
+		
+	</body>
+</html>
