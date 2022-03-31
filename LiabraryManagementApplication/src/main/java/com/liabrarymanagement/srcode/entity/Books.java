@@ -5,8 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 
@@ -26,21 +24,55 @@ public class Books {
 	@Column(name="book_descreption")
 	private String description ;
 	
-	@ManyToOne
-	@JoinColumn(name="categories_id")
-	private Categories categories;
+	/*
+	 * @OneToMany
+	 * 
+	 * @JoinColumn(name="categories_id")
+	 */
+	private String categories ;
+	/*
+	 * @OneToMany
+	 * 
+	 * @JoinColumn(name="author_id") private List<Author> author = new
+	 * ArrayList<Author>();
+	 */
+	private String author ; 
 	
-	@ManyToOne
-	@JoinColumn(name="author_id")
-	private Author author;
 	
 	
+
+
+
 	
+
+
 	
-	
+
+
+
+
+	public String getCategories() {
+		return categories;
+	}
+
+
+	public void setCategories(String categories) {
+		this.categories = categories;
+	}
+
+
+	public String getAuthor() {
+		return author;
+	}
+
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+
 	public Books() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 

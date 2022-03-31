@@ -11,6 +11,7 @@ import javax.persistence.Table;
 @Table(name = "author")
 public class Author {
 
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "author_id")
@@ -23,6 +24,10 @@ public class Author {
 		this.id = id;
 		this.name = name;
 	}
+	public Author() {
+		
+	}
+
 
 	public long getId() {
 		return id;
