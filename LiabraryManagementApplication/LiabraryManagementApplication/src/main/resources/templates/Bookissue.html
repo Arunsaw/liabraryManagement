@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+ <head>
+ <title>Issue Book</title>
+ <link rel="stylesheet" th:href="@{/styles.css}" />
+ </head>
+ <body>
+ <form method="POST" th:action="@{issueBook}" th:object="${Student}">
+ <h1>Issue Book from here !</h1><!-- <img th:src="@{/images/TacoCloud.png}"/>
+ <a th:href="@{/design}" id="another">Issue book</a><br/> -->
+ <!-- <div th:if="${#fields.hasErrors()}">
+ <span class="validationError">
+ Please correct the problems below and resubmit.
+ </span> -->
+ <!-- </div> -->
+
+<!-- <label for="id"> Student ID: </label>
+ <input type="number" th:field="*{id}"/> -->
+  <label for="name"> Student Name: </label>
+ <input type="text" th:field="*{name}"/>
+ <br/> 
+ <label for="name"> Book ID: </label>
+ <input type="text" th:field="*{bookId}"/>
+ <!-- <th:block th:each="book : ${issuedBook}">
+  
+    Book ID:
+    <input type="text" th:name="${Student[__${personStat.index}__].name}" th:value="${book.id}" />
+  
+</th:block> -->
+ <!-- <label for="book_id">Book_id </label>
+<div >
+ <input  type="text" th:field="*{book.id}"/>
+ </div>
+ <br/>
+ <label for="description">Description: </label>
+ <input type="text" th:field="*{description}"/> -->
+ <br/>
+
+ <input type="submit" value="issue Book"/>
+ </form>
+ </body>
+</html>

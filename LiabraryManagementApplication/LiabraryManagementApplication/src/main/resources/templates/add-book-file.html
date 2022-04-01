@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+ xmlns:th="http://www.thymeleaf.org">
+ <head>
+ <title>Add book</title>
+ <link rel="stylesheet" th:href="@{/styles.css}" />
+ </head>
+ <body>
+ <form method="POST" th:action="@{addingBook}" th:object="${Books}">
+ <h1>Add books Here !</h1><!-- <img th:src="@{/images/TacoCloud.png}"/>
+ <a th:href="@{/design}" id="another">Add book</a><br/> -->
+ <div th:if="${#fields.hasErrors()}">
+ <span class="validationError">
+ Please correct the problems below and resubmit.
+ </span>
+ </div>
+
+<!--  <h3>Deliver my taco masterpieces to...</h3> -->
+ <label for="name">Name: </label>
+ <input type="text" th:field="*{name}"/>
+ <br/>
+ <label for ="categories">Categories </label>
+ <input  type = "text" th:field="*{categories}"/>
+ <br/>
+ <label for="author">Author: </label>
+
+ <input  type="text" th:field="*{author}"/>
+ 
+ <br/>
+ <label for="description">Description: </label>
+ <input type="text" th:field="*{description}"/>
+ <br/>
+
+ <input type="submit" value="Save Book"/>
+ </form>
+ </body>
+</html>
